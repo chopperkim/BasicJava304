@@ -1,6 +1,6 @@
 package chapter07.exercise;
 
-public class Human {
+public class Human implements Comparable<Human>{
 	private String name;
 	private int age;
 	public Human() {
@@ -25,5 +25,21 @@ public class Human {
 	public String toString() {
 		return "이름: " + name + ", 나이: " + age;
 	}
-	
+	@Override
+	public int compareTo(Human o) {
+		if (this.name.compareTo(o.name) > 0) {
+			return -1;
+		} else if (this.name.compareTo(o.name) == 0) {
+			return 0;
+		} else {
+			return 1;
+		}
+//		if (this.age > o.age) {
+//			return -1;
+//		} else if (this.age == o.age) {
+//			return 0;
+//		} else {
+//			return 1;
+//		}
+	}
 }
