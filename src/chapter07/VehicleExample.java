@@ -7,6 +7,11 @@ public class VehicleExample {
 //		Vehicle vehicle = new Taxi();
 		Vehicle vehicle = new Bus();
 		
+		Bus bus = (Bus) vehicle;
+		
+		Vehicle v = new Vehicle();
+		Bus b = (Bus) v;
+		
 		driver.drive(vehicle);
 		driver.drive(vehicle);
 		
